@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">    
+    <title>3.2 Interacción dinámica JavaScript/HTML/CSS </title>
+</head>
+<body>
+    <div class="principal">
+    <header class="h4">
+        <h3>Online Border Radious Generator</h3>
+    </header>
+    <main class="main">
+        <!-- Seccion de arriba  -->
+        <div class="container-border">
+            <!-- Caja de la izquierda arriba -->
+            <div class="tb-iz">
+            <div class="border-div">                 
+                <input id="inputLT" class="inputNumber" value="0" min="0" type="number">
+                <input type="range" id="radiousLT" class="slider" value="0" min="0" max="40">                
+                <!-- checkbox -->
+                <div>
+                <input type="checkbox" id="allRadious"  value="Bike" checked>
+                <label for="allRadious"> All the same </label>
+                </div>
+            </div>
+            </div>
+            <div class="separete"></div>
+            <!-- Caja de la derecha ariba -->
+            <div class="tb-der">
+            <div class="border-div">
+                <input id="inputRT" class="inputNumber" value="0" min="0" type="number">
+                <input type="range" class="slider" id="radiousRT" value="0" min="0" max="40">                
+            </div>
+            </div>
+        </div>
+        <!-- Textarea para mostrar los resultador -->
+        <div class="container-center">
+            <div class="radious" id="taReview">
+            <textarea  name="w3review" rows="4" cols="25"> </textarea>
+            </div>
+        </div>
+        <!-- Textarea Fin -->
+        <!-- Seccion de abajo -->
+        <div class="container-border">
+            <!-- Caja de la izquierda abajo -->
+            <div class="db-iz">
+            <div class="border-div"> 
+                <input id="inputLB" class="inputNumber" value="0" min="0" type="number">
+                <input type="range" class="slider" id="radiousLB" value="0" min="0" max="40">               
+            </div>
+            </div>
+            <div class="separete"></div>
+            <!-- Caja de la izquierda abajo -->
+            <div class="db-der">
+            <div class="border-div">
+                <input id="inputRB" class="inputNumber" value="0" min="0" type="number">
+                <input type="range" class="slider" id="radiousRB" value="0" min="0" max="40">
+            </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="settingRow">
+            <div class="settingRow">
+                <div class="settingRowLabel">
+                    Width: <span class="resetToThis" id="border1" data-callfunction="refreshBorder" data-slider="borderWidth">1</span>
+                </div>
+                <div class="settingRowInput" style="max-width: 300px;float: left;">
+                    <div class="slidecontainer">
+                        <input type="range" min="0" max="30" value="5" class="slider" id="widthBorder" >
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="settingRow">
+            <div class="settingRow">
+                <div class="settingRowLabel">
+                    Style:
+                </div>
+                <div class="settingRowInput">
+                    <div id="borderStyle">
+                        <div id="borderStyles">
+                            <a style="border-style: solid;" title="solid"   id="borderSolid">solid</a>
+                            <a style="border-style: dotted;" title="dotted" id="borderDotted">dotted</a>
+                            <a style="border-style: dashed;" title="dashed" id="borderDashed">dashed</a>
+                            <a style="border-style: double;" title="double" id="borderDouble">double</a>
+                            <a style="border-style: groove;" title="groove" id="borderGroove">groove</a>
+                            <a style="border-style: ridge;" title="ridge" id="borderRidge">ridge</a>
+                            <a style="border-style: inset;" title="inset" id="borderInset">inset</a>
+                            <a style="border-style: outset;" title="outset" id="borderOutset">outset</a>
+                            <a style="border-style: hidden;" title="hidden" id="borderHidden">hidden</a>
+                            <a style="border-style: none;" title="none" id="borderNone">none</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="settingRow">
+            <div class="settingRowLabel">
+                Color:
+            </div>
+            <div class="settingRowInput">
+                <input type="color" id="borderColor" value="#1C6EA4" />
+                <div class="wrapBorderOpacity">
+                    <div class="slidecontainer">
+                        <input type="range" min="0" max="100" value="100" class="slider2" id="alphaBorder">
+                      </div>
+                </div>
+                <span class="resetToThis" id="border2"  data-callfunction="refreshBorder" data-slider="borderColorOpacity">1</span>
+            </div>
+        </div>
+        <div class="settingRow clearfix">
+            <div class="settingRowLabel">
+                Position:
+            </div>
+            <div class="settingRowInput">
+                <div id="whichBorder">
+                    <a class="selected" title="border" style="border: 4px solid #1C6EA4;" id="all">All</a>
+                    <a title="border-top" style="border-top: 4px solid #1C6EA4;" id="topo">Top</a>
+                    <a title="border-right" style="border-right: 4px solid #1C6EA4;" id="right">Right</a>
+                    <a title="border-bottom" style="border-bottom: 4px solid #1C6EA4;" id="bottom">Bottom</a>
+                    <a title="border-left" style="border-left: 4px solid #1C6EA4;" id="left">Left</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>  
+    <script src="js/main.js"></script>
+</body>
+</html>
